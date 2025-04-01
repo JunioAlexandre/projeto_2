@@ -1,2 +1,2 @@
-#### Java Swing + PostgreSQL
+Java  + PostgreSQL
 
