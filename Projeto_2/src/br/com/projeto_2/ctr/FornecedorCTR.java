@@ -17,7 +17,7 @@ public class FornecedorCTR {
         try{
             if (fornecedorDAO.inserirFornecedor(fornecedorDTO)){
                 return "Fornecedor cadastrado com sucesso!!!";
-            }else{
+            }else{ 
                 return "Fornecedor não cadastrado!!!";
             }
         }
@@ -63,7 +63,8 @@ public class FornecedorCTR {
         }
     }
     
-     public void CLoseDB(){
+     
+     public void CloseDB(){
          ConexaoDAO.CloseDB();
      }
      
