@@ -39,6 +39,11 @@ public class PrincipalVIEW extends javax.swing.JFrame {
 
         menuCadastro.setMnemonic('f');
         menuCadastro.setText("Cadastro");
+        menuCadastro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuCadastroActionPerformed(evt);
+            }
+        });
 
         itemMenuFornecedor.setMnemonic('o');
         itemMenuFornecedor.setText("Fornecedor");
@@ -90,7 +95,7 @@ public class PrincipalVIEW extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void itemMenuProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemMenuProdutoActionPerformed
-        // TODO add your handling code here:
+        abreProdutoVIEW();
     }//GEN-LAST:event_itemMenuProdutoActionPerformed
 
     private void menuSairMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menuSairMouseClicked
@@ -100,6 +105,10 @@ public class PrincipalVIEW extends javax.swing.JFrame {
     private void itemMenuFornecedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemMenuFornecedorActionPerformed
         abreFornecedorVIEW();
     }//GEN-LAST:event_itemMenuFornecedorActionPerformed
+
+    private void menuCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuCadastroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_menuCadastroActionPerformed
 
     /**
      * @param args the command line arguments
@@ -149,7 +158,21 @@ public class PrincipalVIEW extends javax.swing.JFrame {
         fornecedorVIEW.setVisible(true);
         fornecedorVIEW.setPosicao();
     }
-
+    
+    private void abreProdutoVIEW(){
+        ProdutoVIEW produtoVIEW = new ProdutoVIEW();
+        this.desktopPane.add(produtoVIEW);
+        produtoVIEW.setVisible(true);
+        produtoVIEW.setPosicao();
+    }
+    
+    private void abreVendaVIEW(){
+        VendaVIEW vendaVIEW = new VendaVIEW();
+        this.desktopPane.add(vendaVIEW);
+        vendaVIEW.setVisible(true);
+        vendaVIEW.setPosicao();
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDesktopPane desktopPane;
     private javax.swing.JMenuItem itemMenuFornecedor;
